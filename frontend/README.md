@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# DayCare
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DayCare is a web application aim to provide tools for child daycare providers to spend less time in facility management and more time sharing their care and love with the kids they are taking care of. The app gives a great way for parents to stay informed on the daily activities and development of their kids.  
 
-## Available Scripts
+## Functional Requirements
 
-In the project directory, you can run:
+* Development focuses on a single page application (SPA) called DayCare, built using React.
+* Data is persisted by the API server using a PostgreSQL database.
+* The client application communicates with an API server over HTTP, using the JSON format.
 
-### `npm start`
+## Behavioural Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Providers
+* Providers such as daycare owners and managers must create their account in order to access admin functions such as Account Management, Employee Management, Billing and Payments
+* Providers can view, create, update and delete user accounts
+* Providers can view, create, update and delete billing and payments
+* Providers can view, create, update and post check-in and checkouts, activities, profiles and reports, accomplishments and milestones, messages and annoucements
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Admin
+* Admin users such as teachers, facilitators and caregivers must create their account in order to be able to use the admin components.
+* A teacher/facilitator/caregiver can create, remove, update, and post attendance
+* A teacher/facilitator/caregiver can create, remove, update, and post daily activities
+* A teacher/facilitator/caregiver can view, create, remove and update profiles and reports
+* A teacher/facilitator/caregiver can create, remove, update, and post kids accomplishment and milestones
+* A teacher/facilitator/caregiver can create, remove, update, and send direct messages, group messages and announcements
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Parents
+* A parent must create their account to login and view their child's daily acitivities, meals, accomplishments and milestones
+* A parent can check-in and check-out their kid
+* A parent can authorize someone to check-out their kid
+* A parent can pay their bills online
+* A parent can register their kid to reserve a slot to avail daycare services including termination of the daycare service
+* A parent can send, view messages and other announcements and notifications
 
-### `npm run build`
+## Technical Specifications
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [React](https://reactjs.org/)
+* [React-bootstrap](https://www.npmjs.com/package/react-bootstrap)
+* [React-pdf](https://www.npmjs.com/package/react-pdf)
+* [@react-pdf/renderer](https://www.npmjs.com/package/@react-pdf/renderer)
+* [React-Router](https://www.npmjs.com/package/react-router)
+* [React-charts](https://www.npmjs.com/package/react-charts)
+* [Node-saas](https://www.npmjs.com/package/node-sass)
+* [Saas](https://www.npmjs.com/package/sass)
+* [Node](https://nodejs.org/en/)
+* [Nodemon](https://www.npmjs.com/package/nodemon)
+* [Cors](https://www.npmjs.com/package/cors)
+* [Cookie-parser](https://www.npmjs.com/package/cookie-parser)
+* [Dot-env](https://www.npmjs.com/package/dot-env)
+* [Morgan](https://www.npmjs.com/package/morgan)
+* [Express](https://expressjs.com/)
+* [PostgresSQL - pg](https://www.npmjs.com/package/pg)
+* [pg-native](https://www.npmjs.com/package/pg-native)
+* [debug](https://www.npmjs.com/package/debug)
+* [Axios](https://github.com/axios/axios)
+* [Babel](https://babeljs.io/)
+* [Webpack](https://webpack.js.org/)
+* [Websockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+* [Weekpack Dev Server](https://github.com/webpack/webpack-dev-server)
+* [nvm](https://github.com/nvm-sh/nvm)
+* [Storybook](https://storybook.js.org/)
+* [Weekpack Dev Server](https://github.com/webpack/webpack-dev-server)
+* [Jest](https://jestjs.io/en/)
+* [Testing Library](https://testing-library.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The [Reckon](https://github.com/caboma/DayCare) Single Page Application created using [Create React App](https://facebook.github.io/create-react-app/). [Express](https://expressjs.com/) is the basis for the [DayCare API](https://github.com/caboma/DayCare/tree/master/backend) server application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Both servers run concurrently; requests are proxied from the Webpack development server to the API server.
 
-### `npm run eject`
+### Database
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [Database Schema Files](https://github.com/caboma/DayCare/tree/master/backend/db/schema)
+* [Database Seed Files](https://github.com/caboma/DayCare/tree/master/backend/db/seeds)
+* [Database ERD Model](https://github.com/caboma/DayCare/blob/master/docs/database/erd-model.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Reference
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* [React Documentation](https://reactjs.org/)
+* [Storybook Documentation](https://storybook.js.org/docs/basics/introduction/)
+* [Jest Documentation](https://jestjs.io/docs/en/getting-started)
+* [Axios Example](https://github.com/axios/axios#example)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Setup
 
-## Learn More
+* Clone the [DayCare Application](https://github.com/caboma/DayCare) repository
+* Make sure you are using node version 8.9.4 on the backend (nvm)
+* Make sure you are using node version 10.20.1 on the frontend (nvm)
+* Install all modules dependencies separately on client and backend and folders by running ```sh npm install`` on each folder.
+* After installing all modules dependencies by running ```sh npm install```
+* Make sure you perform a [db reset](http://localhost:3001/api/debug/reset) before run DayCare App.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Running Webpack Development Server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm start
+```
+## Final Product
 
-### Code Splitting
+### Dashboard
+![Dashboard](https://github.com/Jgabriel88/Reckon/blob/master/docs/screenshots/dashboard.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Incomes Page
+![Incomes](https://github.com/Jgabriel88/Reckon/blob/master/docs/screenshots/incomes.png)
 
-### Analyzing the Bundle Size
+![Adding Income](https://github.com/Jgabriel88/Reckon/blob/master/docs/screenshots/new-income.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Expenses Page
+![Expenses](https://github.com/Jgabriel88/Reckon/blob/master/docs/screenshots/expenses.png)
 
-### Making a Progressive Web App
+![New Expense](https://github.com/Jgabriel88/Reckon/blob/master/docs/screenshots/new-expense.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Accounts Page
+![Accounts](https://github.com/Jgabriel88/Reckon/blob/master/docs/screenshots/accounts.png)
 
-### Advanced Configuration
+### Account Detail
+![Account Detail](https://github.com/Jgabriel88/Reckon/blob/master/docs/screenshots/accounts1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Reports Page
+![Incomes Report](https://github.com/Jgabriel88/Reckon/blob/master/docs/screenshots/income-report.png)

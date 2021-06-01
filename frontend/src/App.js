@@ -9,9 +9,16 @@ const App = () => {
       <Router>
         
         <Switch>
-          <Route path="/">
-
+          <Route path="/" exact>
+            <div>
+              <h1>This is root</h1>
+            </div>
           </Route>
+          <Router path="/dashboard">
+            <div>
+              <h1>This is dashboard</h1>
+            </div>
+          </Router>
         </Switch>
       </Router>
     </main>
